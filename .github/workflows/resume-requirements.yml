@@ -1,0 +1,24 @@
+name: Resume Requirements
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    permissions:
+      packages: write
+      contents: read
+    steps:
+      - name: Login to Registry
+        run: docker login --username=${{ secrets.REGISTRY_USERNAME }} --password ${{ secrets.REGISTRY_PASSWORD }} crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com
+
+      - name: Mirrors
+        run: |
+          docker pull docker pull redis:7.2
+          docker tag redis:7.2 crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/redis:7.2
+          docker push crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/redis:7.2
+
+          docker pull docker pull erikdubbelboer/phpredisadmin:latest
+          docker tag erikdubbelboer/phpredisadmin:latest crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/phpredisadmin:latest
+          docker push crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/phpredisadmin:latest
