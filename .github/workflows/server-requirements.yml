@@ -22,3 +22,7 @@ jobs:
           docker pull alpine:latest
           docker tag alpine:latest crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/alpine:latest
           docker push crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/alpine:latest
+
+          docker pull portainer/portainer-ce:latest
+          docker tag portainer/portainer-ce:latest crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/portainer-ce:latest
+          docker push crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/portainer-ce:latest
