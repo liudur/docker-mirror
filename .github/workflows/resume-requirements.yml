@@ -15,10 +15,10 @@ jobs:
 
       - name: Mirrors
         run: |
-          docker pull docker pull redis:7.2
+          docker pull redis:7.2
           docker tag redis:7.2 crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/redis:7.2
           docker push crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/redis:7.2
 
-          docker pull docker pull erikdubbelboer/phpredisadmin:latest
+          docker pull erikdubbelboer/phpredisadmin:latest
           docker tag erikdubbelboer/phpredisadmin:latest crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/phpredisadmin:latest
           docker push crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/phpredisadmin:latest
