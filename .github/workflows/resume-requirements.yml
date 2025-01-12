@@ -15,10 +15,14 @@ jobs:
 
       - name: Mirrors
         run: |
-          docker pull redis:7.2
-          docker tag redis:7.2 crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/redis:7.2
-          docker push crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/redis:7.2
+          docker pull ghcr.io/browserless/chromium:latest
+          docker tag ghcr.io/browserless/chromium:latest crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/chromium:latest
+          docker push crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/chromium:latest
 
-          docker pull erikdubbelboer/phpredisadmin:latest
-          docker tag erikdubbelboer/phpredisadmin:latest crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/phpredisadmin:latest
-          docker push crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/phpredisadmin:latest
+          docker pull minio/minio:latest
+          docker tag minio/minio:latest crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/minio:latest
+          docker push crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/minio:latest
+
+          docker pull postgres:16-alpine
+          docker tag postgres:16-alpine crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/postgres:16-alpine
+          docker push crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/postgres:16-alpine
