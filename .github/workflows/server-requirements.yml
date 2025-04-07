@@ -15,14 +15,24 @@ jobs:
 
       - name: Mirrors
         run: |
-          docker pull nginx:latest
-          docker tag nginx:latest crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/nginx:latest
-          docker push crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/nginx:latest
+          docker pull easytier/easytier:latest
+          docker tag easytier/easytier:latest crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/easytier:latest
+          docker push crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/easytier:latest
 
-          docker pull alpine:latest
-          docker tag alpine:latest crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/alpine:latest
-          docker push crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/alpine:latest
+          docker pull containrrr/watchtower:latest
+          docker tag containrrr/watchtower:latest crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/watchtower:latest
+          docker push crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/watchtower:latest
 
-          docker pull portainer/portainer-ce:latest
-          docker tag portainer/portainer-ce:latest crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/portainer-ce:latest
-          docker push crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/portainer-ce:latest
+          
+
+          # docker pull nginx:latest
+          # docker tag nginx:latest crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/nginx:latest
+          # docker push crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/nginx:latest
+
+          # docker pull alpine:latest
+          # docker tag alpine:latest crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/alpine:latest
+          # docker push crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/alpine:latest
+
+          # docker pull portainer/portainer-ce:latest
+          # docker tag portainer/portainer-ce:latest crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/portainer-ce:latest
+          # docker push crpi-ofh9eows662r8dot.cn-beijing.personal.cr.aliyuncs.com/mirror6/portainer-ce:latest
